@@ -1,0 +1,25 @@
+{
+  "servers": [
+    {
+      "name": "io.github.github/github-mcp-server",
+      "description": "GitHub's official MCP Server - connects AI tools directly to GitHub's platform for repository management, issue & PR automation, CI/CD intelligence, code analysis, and team collaboration",
+      "latestVersion": "0.1.0",
+      "packages": [
+        {
+          "type": "docker",
+          "url": "https://github.com/github/github-mcp-server/pkgs/container/github-mcp-server",
+          "version": "latest"
+        }
+      ],
+      "metadata": {
+        "status": "active",
+        "createdAt": "2025-03-04T16:42:04Z",
+        "updatedAt": "2025-11-10T08:37:30Z"
+      }
+    }
+  ],
+  "metadata": {
+    "count": 1,
+    "nextCursor": null
+  }
+}
