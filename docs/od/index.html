@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/registry/main/schema/registry-schema.json",
+  "version": "1.0.0",
+  "generated_at": "2025-11-06T14:28:10Z",
+  "servers": [
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "MCP server providing access to GitHub repositories, issues, pull requests, code search, and user data.",
+      "homepage": "https://github.com",
+      "documentation": "https://github.com/modelcontextprotocol",
+      "tags": [
+        "git",
+        "code-hosting",
+        "issues",
+        "pull-requests",
+        "search"
+      ],
+      "capabilities": {
+        "resources": true,
+        "tools": true,
+        "events": false
+      },
+      "transport": {
+        "type": "command",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-github"
+        ]
+      },
+      "env": {
+        "GITHUB_TOKEN": {
+          "required": true,
+          "description": "GitHub Personal Access Token (classic or fine-grained) with appropriate scopes (e.g. repo, read:org) for private data access."
+        }
+      },
+      "privacy": {
+        "data_access": "Only accesses GitHub data permitted by the provided token scopes.",
+        "data_retention": "Does not persist data beyond session runtime."
+      },
+      "license": "MIT",
+      "version": "0.1.0"
+    }
+  ]
+}
