@@ -1,5 +1,5 @@
 {
-    "$schema": "https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/server-json/server.schema.json",
+    "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/registry/refs/heads/main/docs/reference/server-json/server.schema.json",
     "version": "1.0.0",
     "generated_at": "2025-11-06T14:28:10Z",
     "servers": [
