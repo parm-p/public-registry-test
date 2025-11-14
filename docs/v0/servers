@@ -4,7 +4,7 @@
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "io.github.github/github-mcp-server",
-        "description": "Connect AI assistants to GitHub - manage repos, issues, PRs, and workflows through natural language.",
+        "description": "Connect AI to GitHub - manage repos, issues, PRs, and workflows.",
         "repository": {
           "url": "https://github.com/github/github-mcp-server",
           "source": "github"
@@ -17,31 +17,27 @@
             "transport": {
               "type": "stdio"
             },
+            "runtimeHint": "docker",
             "runtimeArguments": [
               {
                 "description": "The runtime command to execute",
-                "isRequired": true,
                 "value": "run",
                 "type": "positional"
               },
               {
                 "description": "Run container in interactive mode",
-                "isRequired": true,
-                "format": "boolean",
-                "value": "true",
+                "value": "-i",
                 "type": "named",
                 "name": "-i"
               },
               {
                 "description": "Automatically remove the container when it exits",
-                "format": "boolean",
-                "value": "true",
+                "value": "--rm",
                 "type": "named",
                 "name": "--rm"
               },
               {
                 "description": "Set an environment variable in the runtime",
-                "isRequired": true,
                 "value": "GITHUB_PERSONAL_ACCESS_TOKEN={token}",
                 "variables": {
                   "token": {
@@ -55,7 +51,6 @@
               },
               {
                 "description": "The container image to run",
-                "isRequired": true,
                 "value": "ghcr.io/github/github-mcp-server",
                 "type": "positional",
                 "valueHint": "image_name"
